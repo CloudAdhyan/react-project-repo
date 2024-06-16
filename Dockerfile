@@ -1,7 +1,7 @@
 FROM node:18-alpine
 WORKDIR /frontend
 COPY ./*.json .
-RUN npm install
+RUN apk add --update nodejs npm
 #RUN npm audit fix --force
 RUN yarn add react-scripts
 COPY . .
